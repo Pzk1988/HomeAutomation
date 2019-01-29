@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Inputs>
+    <DigitalInput name="010101"/>
+    <DigitalInput name="010102"/>
+    <DigitalInput name="010103"/>
+    <DigitalInput name="010104"/>
+    <DigitalInput name="010105"/>
+    <DigitalInput name="010106"/>
+    <DigitalInput name="010107"/>
+    <DigitalInput name="010108"/>
+    <DigitalInput name="010109"/>
+    <DigitalInput name="010110"/>
+    <DigitalInput name="010111"/>
+    <DigitalInput name="010112"/>
+    <DigitalInput name="010113"/>
+    <DigitalInput name="010114"/>
+    <DigitalInput name="010115"/>
+    <DigitalInput name="010116"/>
+    <DigitalInput name="010201"/>
+    <DigitalInput name="010202"/>
+    <DigitalInput name="010203"/>
+    <DigitalInput name="010204"/>
+    <DigitalInput name="010205"/>
+    <DigitalInput name="010206"/>
+    <DigitalInput name="010207"/>
+    <DigitalInput name="010208"/>
+    <DigitalInput name="010209"/>
+    <DigitalInput name="010210"/>
+    <DigitalInput name="010211"/>
+    <DigitalInput name="010212"/>
+    <DigitalInput name="010213"/>
+    <DigitalInput name="010214"/>
+    <DigitalInput name="010215"/>
+    <DigitalInput name="010216"/>
+    <DigitalInput name="010301"/>
+    <DigitalInput name="010302"/>
+    <DigitalInput name="010303"/>
+    <DigitalInput name="010304"/>
+    <DigitalInput name="010305"/>
+    <DigitalInput name="010306"/>
+    <DigitalInput name="010307"/>
+    <DigitalInput name="010308"/>
+    <DigitalInput name="010309"/>
+    <DigitalInput name="010310"/>
+    <DigitalInput name="010311"/>
+    <DigitalInput name="010312"/>
+    <DigitalInput name="010313"/>
+    <DigitalInput name="010314"/>
+    <DigitalInput name="010315"/>
+    <DigitalInput name="010316"/>
+    <DigitalInput name="010401"/>
+    <DigitalInput name="010402"/>
+    <DigitalInput name="010403"/>
+    <DigitalInput name="010404"/>
+    <DigitalInput name="010405"/>
+    <DigitalInput name="010406"/>
+    <DigitalInput name="010407"/>
+    <DigitalInput name="010408"/>
+    <DigitalInput name="010409"/>
+    <DigitalInput name="010410"/>
+    <DigitalInput name="010411"/>
+    <DigitalInput name="010412"/>
+    <DigitalInput name="010413"/>
+    <DigitalInput name="010414"/>
+    <DigitalInput name="010415"/>
+    <DigitalInput name="010416"/>
+    <DigitalInput name="010501"/>
+    <DigitalInput name="010502"/>
+    <DigitalInput name="010503"/>
+    <DigitalInput name="010504"/>
+    <DigitalInput name="010505"/>
+    <DigitalInput name="010506"/>
+    <DigitalInput name="010507"/>
+    <DigitalInput name="010508"/>
+    <DigitalInput name="010509"/>
+    <DigitalInput name="010510"/>
+    <DigitalInput name="010511"/>
+    <DigitalInput name="010512"/>
+    <DigitalInput name="010513"/>
+    <DigitalInput name="010514"/>
+    <DigitalInput name="010515"/>
+    <DigitalInput name="010516"/>
+    <TempInput name="Room 0">
+        <id>28-000008d6bac0</id>
+    </TempInput>
+    <TempInput name="Room 1">
+        <id>28-000008d6bac1</id>
+    </TempInput>
+    <TempInput name="Room 2">
+        <id>28-000008d6bac2</id>
+    </TempInput>
+    <TempInput name="Room 3">
+        <id>28-000008d6bac3</id>
+    </TempInput>
+    <TempInput name="Room 4">
+        <id>28-000008d6bac4</id>
+    </TempInput>
+    <TempInput name="Room 5">
+        <id>28-000008d6bac5</id>
+    </TempInput>
+    <TempInput name="Room 6">
+        <id>28-000008d6bac6</id>
+    </TempInput>
+    <TempInput name="Room 7">
+        <id>28-000008d6bac7</id>
+    </TempInput>
+    <TempInput name="Room 8">
+        <id>28-000008d6bac8</id>
+    </TempInput>
+    <TempInput name="Room 9">
+        <id>28-000008d6bac9</id>
+    </TempInput>
+    <TempInput name="Super room">
+        <id>666</id>
+    </TempInput>
+</Inputs>
