@@ -1,57 +1,26 @@
 package Model;
 
-import javax.xml.bind.annotation.*;
+import javax.xml.bind.annotation.XmlSeeAlso;
+import javax.xml.bind.annotation.XmlTransient;
 
-@XmlSeeAlso(TempInput.class)
-public class Input
+@XmlSeeAlso({TempInput.class})
+public class Input extends InOutBase
 {
     public Input(){}
-    public Input(String name){
-        this.name = name;
-        this.state = 0;
-        this.prevState = 0;
-        this.outOfControl = true;
-    }
-
-    @Override
-    public String toString(){
-        return "Digital input: " + name;
-    }
+    public Input(String name){ super(name); }
 
     @XmlTransient
-    public int getState() {
-        return state;
+    public boolean getOutOfControl() {
+        return outOfControl;
     }
-    public void setState(int state) {
-        this.state = state;
-    }
-
-    @XmlTransient
-    public int getPrevState() {
-        return prevState;
-    }
-    public void setPrevState(int prevState) {
-        this.prevState = prevState;
-    }
-
-    @XmlTransient
     public void setOutOfControl(boolean outOfControl) {
         this.outOfControl = outOfControl;
     }
-    public boolean getOutOfControl(){
-        return outOfControl;
-    }
 
-    @XmlAttribute(name = "name")
-    public void setName(String name){
-        this.name = name;
-    }
-    public String getName(){
-        return name;
-    }
+    private boolean outOfControl;
 
-    protected int state;
-    protected boolean outOfControl;
-    protected int prevState;
-    protected String name;
+    @Override
+    public String toString(){
+        return "Input: " + name;
+    }
 }

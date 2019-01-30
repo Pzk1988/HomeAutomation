@@ -1,8 +1,5 @@
 package com;
-import Model.Configuration;
-import Model.Input;
-import Model.Inputs;
-import Model.TempInput;
+import Model.*;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
@@ -12,16 +9,19 @@ import java.io.File;
 
 public class HomeAutomation {
 
+    private Outputs outputs;
     private Inputs inputs;
     private Configuration config;
 
     public void run(){
         config = deserialize(Configuration.class,"Configuration.xml");
         inputs = deserialize(Inputs.class, "InputList.xml");
-        for (Input input: inputs) {
-            System.out.println(input.toString());
-        }
+        outputs = deserialize(Outputs.class, "OutputList.xml");
+
         //intializeInputList();
+        //intializeOutputList();
+
+        deserializationValidation();
     }
 
     private void intializeInputList(){
@@ -41,6 +41,25 @@ public class HomeAutomation {
         }
         serialize(inputs, "InputList.xml");
     }
+    private void intializeOutputList(){
+        outputs = new Outputs();
+
+        for(int i = 0; i < config.getDigitalOutputSlots(); i++)
+        {
+            for(int j = 0; j < config.getChannelsPerSlot(); j++)
+            {
+                String name = "01" + String.format("%02d", i+1) + String.format("%02d", j+1);
+                outputs.add(new Output(name));
+            }
+        }
+
+        serialize(outputs, "OutputList.xml");
+    }
+    private void deserializationValidation(){
+        System.out.print(config.toString());
+        System.out.print(inputs.toString());
+        System.out.print(outputs.toString());
+    }
 
     public <T> void serialize(T object, String name) {
         try {
@@ -54,7 +73,6 @@ public class HomeAutomation {
             System.err.println(String.format("Exception while marshalling: %s", e.getMessage()));
         }
     }
-
     public <T> T deserialize(Class<T> clazz, String name) {
         try {
             File file = new File(name);

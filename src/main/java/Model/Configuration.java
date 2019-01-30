@@ -52,4 +52,10 @@ public class Configuration {
     public void setTempInputs(int tempInputs) {
         this.tempInputs = tempInputs;
     }
+
+    @Override
+    public String toString(){
+        String res = "Config: \r\n";
+        return res;
+    }
 }

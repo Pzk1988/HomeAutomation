@@ -17,7 +17,7 @@ public class TempInput extends Input {
 
     private String id;
 
-    @XmlElement
+    @XmlAttribute
     public String getId(){
         return id;
     }

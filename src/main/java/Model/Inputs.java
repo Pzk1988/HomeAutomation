@@ -4,8 +4,6 @@ import java.util.AbstractList;
 import java.util.ArrayList;
 
 @XmlRootElement(name="Inputs")
-@XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name="Input")
 public class Inputs extends AbstractList<Input> {
 
     @XmlElements ({
@@ -27,5 +25,14 @@ public class Inputs extends AbstractList<Input> {
     @Override
     public boolean add(Input input){
         return list.add(input);
+    }
+
+    @Override
+    public String toString(){
+        String res = "";
+        for(Input input : list){
+            res += input.toString() + "\r\n";
+        }
+        return  res;
     }
 }
