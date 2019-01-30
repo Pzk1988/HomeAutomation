@@ -55,7 +55,7 @@ public class Configuration {
 
     @Override
     public String toString(){
-        String res = "Config: \r\n";
+        String res = "Config: " + remoteInOutIp + ":" + remoteInOutPort + "\r\n";
         return res;
     }
 }
