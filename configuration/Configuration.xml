@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<configuration>
+    <channelsPerSlot>16</channelsPerSlot>
+    <digitalInputSlots>5</digitalInputSlots>
+    <digitalOutputSlots>5</digitalOutputSlots>
+    <remoteInOutIp>192.168.1.3</remoteInOutIp>
+    <remoteInOutPort>802</remoteInOutPort>
+    <tempInputs>10</tempInputs>
+</configuration>

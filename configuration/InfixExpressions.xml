@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<InfixExpressions>
+    <InfixExpressions out="out_010101" expression="in_010101 &amp; in_010102"/>
+    <InfixExpressions out="Coil_1" expression="+Coil_0 | out_010514"/>
+    <InfixExpressions out="Coil_8" expression="( out_010101 &amp; in_010102 ) &amp; ( -Coil_1 )"/>
+    <InfixExpressions out="out_010102" expression="( !out_010101 &amp; in_010102 ) &amp; ( Room 9 &gt; 20.3 )"/>
+    <InfixExpressions out="out_010302" expression="( ( !out_010101 &amp; in_010102 ) | Coil_3 ) &amp; ( Room 9 &gt; 20.3 )"/>
+</InfixExpressions>
