@@ -10,7 +10,7 @@ public class Outputs extends AbstractList<Output> {
     @XmlElements({
             @XmlElement(name = "Output", type = Output.class, required = false)
     })
-    private  final ArrayList<Output> list = new ArrayList();
+    private  final AbstractList<Output> list = new ArrayList();
 
     @Override
     public Output get(int index) {

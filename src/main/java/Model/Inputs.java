@@ -10,7 +10,7 @@ public class Inputs extends AbstractList<Input> {
             @XmlElement(name = "TempInput", type = TempInput.class, required = false),
             @XmlElement(name = "DigitalInput", type = Input.class, required = false)
     })
-    private  final ArrayList<Input> list = new ArrayList();
+    private  final AbstractList<Input> list = new ArrayList();
 
     @Override
     public Input get(int index) {

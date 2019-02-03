@@ -1,11 +1,14 @@
 package Model;
 
+import Interface.IOperand;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlTransient;
 
 public class InOutBase extends Token
 {
-    public InOutBase(){}
+    public InOutBase(){
+        super(TokenType.OPERAND);
+    }
     public InOutBase( String name ) {
         super(TokenType.OPERAND);
         this.name = name;

@@ -1,8 +1,8 @@
 package Model;
 
-import Interface.ILogicExpressionResult;
+import Interface.ILogicExpResult;
 
-public class Output extends InOutBase implements ILogicExpressionResult {
+public class Output extends InOutBase implements ILogicExpResult {
     public Output(){}
 
     public Output(String name){

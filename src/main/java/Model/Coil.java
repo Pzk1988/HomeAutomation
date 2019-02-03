@@ -1,13 +1,18 @@
 package Model;
 
-import Interface.ILogicExpressionResult;
+import Interface.ILogicExpResult;
 
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlTransient;
 
-public class Coil extends Token implements ILogicExpressionResult  {
-    public Coil(){}
-    public Coil(String name){ this.name = name; }
+public class Coil extends Token implements ILogicExpResult {
+    public Coil(){
+        super(TokenType.OPERAND);
+    }
+    public Coil(String name){
+        super(TokenType.OPERAND);
+        this.name = name;
+    }
     public void setValue(int value) {
         this.value = value;
     }

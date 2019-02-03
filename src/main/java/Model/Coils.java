@@ -11,7 +11,7 @@ public class Coils extends AbstractList<Coil> {
     @XmlElements({
             @XmlElement(name = "Coil", type = Coil.class, required = false)
     })
-    private  final ArrayList<Coil> list = new ArrayList();
+    private  final AbstractList<Coil> list = new ArrayList();
 
     @Override
     public Coil get(int index) {
