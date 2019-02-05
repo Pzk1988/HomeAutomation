@@ -2,32 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="61b2718b-c4ce-4358-ba94-eb9ddfa2f38d" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Exceptions/InfixPostfixParsException.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Exceptions/PostfixParseException.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Exceptions/UnknowResultException.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Exceptions/UnknownTokenException.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Interface/IOperand.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Model/Constant.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Model/LogicExpEvaluator.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Model/Operator.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Model/OperatoryType.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Communication/RemoteIoThread.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Logger/Logger.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/configuration/InfixExpressions.xml" afterPath="$PROJECT_DIR$/configuration/InfixExpressions.xml" />
-      <change beforePath="$PROJECT_DIR$/configuration/InputList.xml" afterPath="$PROJECT_DIR$/configuration/InputList.xml" />
-      <change beforePath="$PROJECT_DIR$/configuration/OutputList.xml" afterPath="$PROJECT_DIR$/configuration/OutputList.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Interface/ILogicExpressionResult.java" afterPath="$PROJECT_DIR$/src/main/java/Interface/ILogicExpResult.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Coil.java" afterPath="$PROJECT_DIR$/src/main/java/Model/Coil.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Coils.java" afterPath="$PROJECT_DIR$/src/main/java/Model/Coils.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/InOutBase.java" afterPath="$PROJECT_DIR$/src/main/java/Model/InOutBase.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Inputs.java" afterPath="$PROJECT_DIR$/src/main/java/Model/Inputs.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Output.java" afterPath="$PROJECT_DIR$/src/main/java/Model/Output.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Outputs.java" afterPath="$PROJECT_DIR$/src/main/java/Model/Outputs.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/PostfixExpression.java" afterPath="$PROJECT_DIR$/src/main/java/Model/PostfixExpression.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/PostfixExpressions.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Token.java" afterPath="$PROJECT_DIR$/src/main/java/Model/Token.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/HomeAutomation.java" afterPath="$PROJECT_DIR$/src/main/java/com/HomeAutomation.java" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Model/Inputs.class" afterPath="$PROJECT_DIR$/target/classes/Model/Inputs.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/HomeAutomation.class" afterPath="$PROJECT_DIR$/target/classes/com/HomeAutomation.class" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -40,35 +18,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="LogicExpEvaluator.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Model/LogicExpEvaluator.java">
+      <file leaf-file-name="RemoteIoThread.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Communication/RemoteIoThread.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+            <state relative-caret-position="441">
+              <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#setInputs#0;class#LogicExpEvaluator#0" expanded="false" />
-                <element signature="method#setLogicExpResults#0;class#LogicExpEvaluator#0" expanded="false" />
-                <element signature="method#parsInfixToPostfix#0;class#LogicExpEvaluator#0" expanded="false" />
-                <element signature="method#addExpresstion#0;class#LogicExpEvaluator#0" expanded="false" />
-                <element signature="method#findTokens#0;class#LogicExpEvaluator#0" expanded="false" />
-                <element signature="method#findOperand#0;class#LogicExpEvaluator#0" expanded="false" />
-                <element signature="method#findOperator#0;class#LogicExpEvaluator#0" expanded="false" />
-                <element signature="method#getActivity#0;class#LogicExpEvaluator#0" expanded="false" />
-                <element signature="method#getType#0;class#LogicExpEvaluator#0" expanded="false" />
-                <element signature="method#findOutput#0;class#LogicExpEvaluator#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PostfixExpression.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Model/PostfixExpression.java">
+      <file leaf-file-name="Logger.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Logger/Logger.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="668">
-              <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+            <state relative-caret-position="442">
+              <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
               <folding>
-                <element signature="method#PostfixExpression#0;class#PostfixExpression#0" expanded="false" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -77,91 +45,12 @@
       <file leaf-file-name="HomeAutomation.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/HomeAutomation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="543">
-              <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+            <state relative-caret-position="612">
+              <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
               <folding>
                 <element signature="method#serialize#0;class#HomeAutomation#0" expanded="false" />
                 <element signature="method#deserialize#0;class#HomeAutomation#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Constant.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Model/Constant.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="14" lean-forward="true" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
-              <folding>
-                <element signature="e#199#200#0" expanded="true" />
-                <element signature="e#227#228#0" expanded="true" />
-                <element signature="e#258#259#0" expanded="true" />
-                <element signature="e#291#292#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Token.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Model/Token.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-              <folding>
-                <element signature="class#TokenActivity#0;class#Token#0" expanded="false" />
-                <element signature="e#277#278#0" expanded="true" />
-                <element signature="e#322#323#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="InfixExpressions.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/configuration/InfixExpressions.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="106" lean-forward="false" selection-start-line="5" selection-start-column="106" selection-end-line="5" selection-end-column="106" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Float.java" pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_151/src.zip!/java/lang/Float.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="449" column="73" lean-forward="false" selection-start-line="449" selection-start-column="52" selection-end-line="449" selection-end-column="73" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Configuration.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/configuration/Configuration.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="InfixPostfixParsException.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Exceptions/InfixPostfixParsException.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="38" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="InputList.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/configuration/InputList.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="80" column="36" lean-forward="true" selection-start-line="80" selection-start-column="36" selection-end-line="80" selection-end-column="36" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -243,9 +132,11 @@
         <option value="$PROJECT_DIR$/configuration/InputList.xml" />
         <option value="$PROJECT_DIR$/configuration/InfixExpressions.xml" />
         <option value="$PROJECT_DIR$/src/main/java/Model/Constant.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/HomeAutomation.java" />
         <option value="$PROJECT_DIR$/src/main/java/Model/LogicExpEvaluator.java" />
         <option value="$PROJECT_DIR$/src/main/java/Model/PostfixExpression.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/HomeAutomation.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Communication/RemoteIoThread.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Logger/Logger.java" />
       </list>
     </option>
   </component>
@@ -291,11 +182,6 @@
             <path>
               <item name="HomeAutomation" type="b2602c69:ProjectViewProjectNode" />
               <item name="HomeAutomation" type="462c0819:PsiDirectoryNode" />
-              <item name="configuration" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HomeAutomation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HomeAutomation" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -325,29 +211,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Exceptions" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HomeAutomation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HomeAutomation" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Interface" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HomeAutomation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HomeAutomation" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HomeAutomation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HomeAutomation" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="Communication" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -531,7 +395,14 @@
       <option name="project" value="LOCAL" />
       <updated>1548889854563</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Evaluation finished">
+      <created>1549227111632</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1549227111632</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -550,12 +421,12 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16364606" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14925373" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17826086" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29130435" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -571,7 +442,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Design 1.0.0 implementation" />
     <MESSAGE value="Infix to Postfix pars/calculation done in 60%" />
-    <option name="LAST_COMMIT_MESSAGE" value="Infix to Postfix pars/calculation done in 60%" />
+    <MESSAGE value="Evaluation finished" />
+    <option name="LAST_COMMIT_MESSAGE" value="Evaluation finished" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -582,8 +454,14 @@
           <properties />
           <option name="timeStamp" value="34" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Logger/Logger.java</url>
+          <line>17</line>
+          <properties />
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="35" />
+      <option name="time" value="43" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -832,13 +710,13 @@
         <state relative-caret-position="272">
           <caret line="16" column="25" lean-forward="false" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#278#279#0" expanded="true" />
-            <element signature="e#312#313#0" expanded="true" />
-            <element signature="e#510#511#0" expanded="true" />
-            <element signature="e#566#567#0" expanded="true" />
-            <element signature="e#595#596#0" expanded="true" />
-            <element signature="e#623#624#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#278#279#0" expanded="false" />
+            <element signature="e#312#313#0" expanded="false" />
+            <element signature="e#510#511#0" expanded="false" />
+            <element signature="e#566#567#0" expanded="false" />
+            <element signature="e#595#596#0" expanded="false" />
+            <element signature="e#623#624#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -867,13 +745,13 @@
         <state relative-caret-position="0">
           <caret line="0" column="14" lean-forward="true" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#224#225#0" expanded="true" />
-            <element signature="e#264#265#0" expanded="true" />
-            <element signature="e#719#720#0" expanded="true" />
-            <element signature="e#766#767#0" expanded="true" />
-            <element signature="e#795#796#0" expanded="true" />
-            <element signature="e#823#824#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#224#225#0" expanded="false" />
+            <element signature="e#264#265#0" expanded="false" />
+            <element signature="e#719#720#0" expanded="false" />
+            <element signature="e#766#767#0" expanded="false" />
+            <element signature="e#795#796#0" expanded="false" />
+            <element signature="e#823#824#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -904,7 +782,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/configuration/InputList.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
+        <state relative-caret-position="385">
           <caret line="80" column="36" lean-forward="true" selection-start-line="80" selection-start-column="36" selection-end-line="80" selection-end-column="36" />
           <folding />
         </state>
@@ -934,10 +812,10 @@
         <state relative-caret-position="85">
           <caret line="5" column="23" lean-forward="false" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
           <folding>
-            <element signature="e#120#121#0" expanded="true" />
-            <element signature="e#150#151#0" expanded="true" />
-            <element signature="e#178#179#0" expanded="true" />
-            <element signature="e#204#205#0" expanded="true" />
+            <element signature="e#120#121#0" expanded="false" />
+            <element signature="e#150#151#0" expanded="false" />
+            <element signature="e#178#179#0" expanded="false" />
+            <element signature="e#204#205#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -963,10 +841,10 @@
         <state relative-caret-position="289">
           <caret line="17" column="21" lean-forward="false" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
           <folding>
-            <element signature="e#624#625#0" expanded="true" />
-            <element signature="e#671#672#0" expanded="true" />
-            <element signature="e#702#703#0" expanded="true" />
-            <element signature="e#729#730#0" expanded="true" />
+            <element signature="e#624#625#0" expanded="false" />
+            <element signature="e#671#672#0" expanded="false" />
+            <element signature="e#702#703#0" expanded="false" />
+            <element signature="e#729#730#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -985,8 +863,8 @@
           <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding>
             <element signature="class#TokenActivity#0;class#Token#0" expanded="false" />
-            <element signature="e#277#278#0" expanded="true" />
-            <element signature="e#322#323#0" expanded="true" />
+            <element signature="e#277#278#0" expanded="false" />
+            <element signature="e#322#323#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -996,10 +874,10 @@
         <state relative-caret-position="0">
           <caret line="0" column="14" lean-forward="true" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
           <folding>
-            <element signature="e#199#200#0" expanded="true" />
-            <element signature="e#227#228#0" expanded="true" />
-            <element signature="e#258#259#0" expanded="true" />
-            <element signature="e#291#292#0" expanded="true" />
+            <element signature="e#199#200#0" expanded="false" />
+            <element signature="e#227#228#0" expanded="false" />
+            <element signature="e#258#259#0" expanded="false" />
+            <element signature="e#291#292#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1009,7 +887,7 @@
         <state relative-caret-position="340">
           <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
             <element signature="method#setInputs#0;class#LogicExpEvaluator#0" expanded="false" />
             <element signature="method#setLogicExpResults#0;class#LogicExpEvaluator#0" expanded="false" />
             <element signature="method#parsInfixToPostfix#0;class#LogicExpEvaluator#0" expanded="false" />
@@ -1024,10 +902,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Model/PostfixExpression.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="668">
+          <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+          <folding>
+            <element signature="method#PostfixExpression#0;class#PostfixExpression#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/HomeAutomation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="543">
-          <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+        <state relative-caret-position="612">
+          <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
           <folding>
             <element signature="method#serialize#0;class#HomeAutomation#0" expanded="false" />
             <element signature="method#deserialize#0;class#HomeAutomation#0" expanded="false" />
@@ -1035,12 +923,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Model/PostfixExpression.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Communication/RemoteIoThread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="668">
-          <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+        <state relative-caret-position="441">
+          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
           <folding>
-            <element signature="method#PostfixExpression#0;class#PostfixExpression#0" expanded="false" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_151/src.zip!/java/io/FileWriter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="61" column="11" lean-forward="false" selection-start-line="61" selection-start-column="11" selection-end-line="61" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Logger/Logger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

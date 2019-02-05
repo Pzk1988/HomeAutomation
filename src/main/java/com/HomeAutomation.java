@@ -1,4 +1,5 @@
 package com;
+import Communication.RemoteIoThread;
 import Exceptions.InfixPostfixParsException;
 import Exceptions.UnknowResultException;
 import Interface.ILogicExpResult;
@@ -26,6 +27,9 @@ public class HomeAutomation {
     private AbstractCollection<ILogicExpResult> logicExpressionResult;
     private AbstractCollection<Token> operandsList;
 
+    private RemoteIoThread remoteIoThread;
+    private Thread thread;
+
     public void run(){
         // Deserialize
         config = deserialize(Configuration.class,CONFIG_PATH + "Configuration.xml");
@@ -50,6 +54,11 @@ public class HomeAutomation {
         logixExpEvaluator.setInputs(operandsList);
         logixExpEvaluator.setLogicExpResults(logicExpressionResult);
         logixExpEvaluator.parsInfixToPostfix(infixExpressions);
+
+        // Threads
+        remoteIoThread = new RemoteIoThread(config);
+        thread = new Thread(remoteIoThread);
+        thread.run();
 
         // Clean
         infixExpressions = null;
