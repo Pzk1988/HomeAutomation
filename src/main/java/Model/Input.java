@@ -20,6 +20,15 @@ public class Input extends InOutBase
     private boolean outOfControl;
 
     @Override
+    public void  setValue(int value) {
+        if(value == 0){
+            this.value = 0;
+        }else{
+            this.value = 1;
+        }
+    }
+
+    @Override
     public String toString(){
         return "Input: " + name;
     }

@@ -3,7 +3,7 @@
     <channelsPerSlot>16</channelsPerSlot>
     <digitalInputSlots>5</digitalInputSlots>
     <digitalOutputSlots>5</digitalOutputSlots>
-    <remoteInOutIp>192.168.1.3</remoteInOutIp>
-    <remoteInOutPort>802</remoteInOutPort>
+    <remoteInOutIp>192.168.1.43</remoteInOutIp>
+    <remoteInOutPort>502</remoteInOutPort>
     <tempInputs>10</tempInputs>
 </configuration>

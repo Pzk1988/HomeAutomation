@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public class Outputs extends AbstractList<Output> {
 
     @XmlElements({
-            @XmlElement(name = "Output", type = Output.class, required = false)
+            @XmlElement(name = "DigitalOutput", type = Output.class, required = false)
     })
     private  final AbstractList<Output> list = new ArrayList();
 

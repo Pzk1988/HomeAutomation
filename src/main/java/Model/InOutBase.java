@@ -18,6 +18,9 @@ public class InOutBase extends Token
     public int getValue() {
         return value;
     }
+    public void setValue(int value) {
+        this.value =  value;
+    }
 
     @XmlTransient
     public int getPrevValue() {
@@ -35,7 +38,16 @@ public class InOutBase extends Token
         this.name = name;
     }
 
+    @XmlAttribute
+    public int getNumber() {
+        return number;
+    }
+    public void setNumber(int number) {
+        this.number = number;
+    }
+
     protected int value;
     private int prevValue;
     protected String name;
+    protected int number;
 }

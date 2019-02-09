@@ -2,6 +2,7 @@ package Model;
 import javax.xml.bind.annotation.*;
 import java.util.AbstractList;
 import java.util.ArrayList;
+import java.util.List;
 
 @XmlRootElement(name="Inputs")
 public class Inputs extends AbstractList<Input> {
@@ -34,5 +35,29 @@ public class Inputs extends AbstractList<Input> {
             res += input.toString() + "\r\n";
         }
         return  res;
+    }
+
+    public List<Input> getList(int chassi) {
+        int start = getStartIndex(chassi);
+        int end = getEndIndex(chassi);
+        return list.subList(start, end);
+    }
+
+    private int getStartIndex(int chassi) {
+        for(int i = 0; i < list.size(); i++){
+            if(((chassi * 10000) < list.get(i).getNumber()) ||  (list.get(i).getClass() != Input.class)){
+                return i;
+            }
+        }
+        return list.size();
+    }
+
+    private int getEndIndex(int chassi) {
+        for(int i = 0; i < list.size(); i ++){
+            if((list.get(i).getNumber() > ((chassi * 10000) + 9999)) || (list.get(i).getClass() != Input.class)){
+                return i;
+            }
+        }
+        return list.size();
     }
 }

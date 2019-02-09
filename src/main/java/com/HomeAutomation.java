@@ -1,11 +1,8 @@
 package com;
 import Communication.RemoteIoThread;
-import Exceptions.InfixPostfixParsException;
-import Exceptions.UnknowResultException;
 import Interface.ILogicExpResult;
-import Interface.IOperand;
 import Model.*;
-import Utilites.ShuntingYard;
+import Logger.Logger;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
@@ -31,6 +28,8 @@ public class HomeAutomation {
     private Thread thread;
 
     public void run(){
+        // Set up configuration
+
         // Deserialize
         config = deserialize(Configuration.class,CONFIG_PATH + "Configuration.xml");
         inputs = deserialize(Inputs.class, CONFIG_PATH + "InputList.xml");
@@ -56,9 +55,9 @@ public class HomeAutomation {
         logixExpEvaluator.parsInfixToPostfix(infixExpressions);
 
         // Threads
-        remoteIoThread = new RemoteIoThread(config);
+        remoteIoThread = new RemoteIoThread(config, inputs.getList(1));
         thread = new Thread(remoteIoThread);
-        thread.run();
+        thread.start();
 
         // Clean
         infixExpressions = null;
@@ -67,6 +66,7 @@ public class HomeAutomation {
     }
 
     private void runtime(){
+        Logger.getInstance().log("Entering main loop");
         while( true ){
             logixExpEvaluator.evaluate();
         }
