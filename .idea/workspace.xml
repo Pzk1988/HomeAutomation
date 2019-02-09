@@ -7,25 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="61b2718b-c4ce-4358-ba94-eb9ddfa2f38d" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/HomeAutomation_jar.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/EasyModbusJava.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/java/InputsTest.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/java/LoggerTest.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/HomeAutomation.iml" afterPath="$PROJECT_DIR$/HomeAutomation.iml" />
-      <change beforePath="$PROJECT_DIR$/configuration/Configuration.xml" afterPath="$PROJECT_DIR$/configuration/Configuration.xml" />
-      <change beforePath="$PROJECT_DIR$/configuration/InputList.xml" afterPath="$PROJECT_DIR$/configuration/InputList.xml" />
-      <change beforePath="$PROJECT_DIR$/configuration/OutputList.xml" afterPath="$PROJECT_DIR$/configuration/OutputList.xml" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Communication/RemoteIoThread.java" afterPath="$PROJECT_DIR$/src/main/java/Communication/RemoteIoThread.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Logger/Logger.java" afterPath="$PROJECT_DIR$/src/main/java/Logger/Logger.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/InOutBase.java" afterPath="$PROJECT_DIR$/src/main/java/Model/InOutBase.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Input.java" afterPath="$PROJECT_DIR$/src/main/java/Model/Input.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Inputs.java" afterPath="$PROJECT_DIR$/src/main/java/Model/Inputs.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Output.java" afterPath="$PROJECT_DIR$/src/main/java/Model/Output.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Outputs.java" afterPath="$PROJECT_DIR$/src/main/java/Model/Outputs.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/HomeAutomation.java" afterPath="$PROJECT_DIR$/src/main/java/com/HomeAutomation.java" />
       <change beforePath="$PROJECT_DIR$/target/classes/Model/Input.class" afterPath="$PROJECT_DIR$/target/classes/Model/Input.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/Model/Inputs.class" afterPath="$PROJECT_DIR$/target/classes/Model/Inputs.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/HomeAutomation.class" afterPath="$PROJECT_DIR$/target/classes/com/HomeAutomation.class" />
@@ -618,7 +600,14 @@
       <option name="project" value="LOCAL" />
       <updated>1549403405792</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Remote input read">
+      <created>1549748618417</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1549748618417</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -691,7 +680,8 @@
     <MESSAGE value="Design 1.0.0 implementation" />
     <MESSAGE value="Infix to Postfix pars/calculation done in 60%" />
     <MESSAGE value="Evaluation finished" />
-    <option name="LAST_COMMIT_MESSAGE" value="Evaluation finished" />
+    <MESSAGE value="Remote input read" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remote input read" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
