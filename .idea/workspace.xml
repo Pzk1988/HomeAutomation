@@ -8,12 +8,6 @@
   <component name="ChangeListManager">
     <list default="true" id="61b2718b-c4ce-4358-ba94-eb9ddfa2f38d" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/configuration/InfixExpressions.xml" afterPath="$PROJECT_DIR$/configuration/InfixExpressions.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Communication/RemoteIoThread.java" afterPath="$PROJECT_DIR$/src/main/java/Communication/RemoteIoThread.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/InOutBase.java" afterPath="$PROJECT_DIR$/src/main/java/Model/InOutBase.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Input.java" afterPath="$PROJECT_DIR$/src/main/java/Model/Input.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Outputs.java" afterPath="$PROJECT_DIR$/src/main/java/Model/Outputs.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/HomeAutomation.java" afterPath="$PROJECT_DIR$/src/main/java/com/HomeAutomation.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -655,7 +649,14 @@
       <option name="project" value="LOCAL" />
       <updated>1549795556134</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Implemented remoter io blocking receive, it needs to be re-implemented to non-blocking">
+      <created>1549837041765</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1549837041765</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -710,7 +711,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.063043475" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.063043475" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1076087" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
