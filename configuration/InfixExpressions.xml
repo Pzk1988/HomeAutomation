@@ -9,4 +9,7 @@
     <InfixExpressions out="out_010202" expression="!in_010202"/>
     <InfixExpressions out="out_010203" expression="-in_010203"/>
     <InfixExpressions out="out_010204" expression="+in_010204"/>
+    <InfixExpressions out="out_010301" expression="in_010301"/>
+    <InfixExpressions out="out_010308" expression="in_010308"/>
+    <InfixExpressions out="out_010316" expression="in_010316"/>
 </InfixExpressions>

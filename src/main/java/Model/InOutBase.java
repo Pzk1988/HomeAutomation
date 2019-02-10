@@ -26,7 +26,7 @@ public class InOutBase extends Token
     public int getPrevValue() {
         return prevValue;
     }
-    public synchronized void setPrevValue(int prevValue) {
+    public void setPrevValue(int prevValue) {
         this.prevValue = prevValue;
     }
 

@@ -6,8 +6,13 @@ import javax.xml.bind.annotation.XmlTransient;
 @XmlSeeAlso({TempInput.class})
 public class Input extends InOutBase
 {
-    public Input(){}
-    public Input(String name){ super(name); }
+    public Input(){
+        outOfControl = true;
+    }
+    public Input(String name){
+        super(name);
+        outOfControl = true;
+    }
 
     @XmlTransient
     public boolean getOutOfControl() {
@@ -20,7 +25,7 @@ public class Input extends InOutBase
     private boolean outOfControl;
 
     @Override
-    public synchronized void setValue(int value) {
+    public void setValue(int value) {
         if(value == 0){
             this.value = 0;
         }else{
@@ -29,7 +34,7 @@ public class Input extends InOutBase
     }
 
     @Override
-    public synchronized int getValue(){
+    public int getValue(){
         return  value;
     }
 

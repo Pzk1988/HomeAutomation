@@ -12,6 +12,7 @@ import java.io.File;
 import java.util.AbstractCollection;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.concurrent.locks.ReentrantLock;
 
 public class HomeAutomation {
 
@@ -27,6 +28,7 @@ public class HomeAutomation {
 
     private RemoteIoThread remoteIoThread;
     private Thread thread;
+    private ReentrantLock lock;
 
     public void run(){
         // Set up configuration
@@ -56,9 +58,10 @@ public class HomeAutomation {
         logixExpEvaluator.parsInfixToPostfix(infixExpressions);
 
         // Threads
-        remoteIoThread = new RemoteIoThread(config, inputs.getList(1));
-        //thread = new Thread(remoteIoThread);
-        //thread.start();
+        remoteIoThread = new RemoteIoThread(config, inputs.getList(1), outputs.getList(1));
+        lock = remoteIoThread.getLock();
+        thread = new Thread(remoteIoThread);
+        thread.start();
 
         // Clean
         infixExpressions = null;
@@ -68,15 +71,16 @@ public class HomeAutomation {
 
     private void runtime(){
         Logger.getInstance().log("Entering main loop");
-        long logTime = System.currentTimeMillis();
 
         while( true ){
             //TODO: Implement remoteIoThread with non blocking functionality and thread safe
-            remoteIoThread.run();
-            logixExpEvaluator.evaluate();
-            inputs.updatePrevValue();
-            outputs.updatePrevValue();
-            coils.updatePrevValue();
+            if(lock.tryLock()) {
+                logixExpEvaluator.evaluate();
+                inputs.updatePrevValue();
+                outputs.updatePrevValue();
+                coils.updatePrevValue();
+                lock.unlock();
+            }
         }
     }
     public <T> void serialize(T object, String name) {

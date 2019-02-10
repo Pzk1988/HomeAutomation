@@ -2,73 +2,107 @@ package Communication;
 
 import Logger.Logger;
 import Model.Configuration;
-import Model.InOutBase;
 import Model.Input;
+import Model.Output;
+import de.re.easymodbus.exceptions.ModbusException;
 import de.re.easymodbus.modbusclient.ModbusClient;
+
 import java.io.IOException;
-import java.util.AbstractCollection;
-import java.util.AbstractList;
-import java.util.Collection;
 import java.util.List;
+import java.util.concurrent.locks.ReentrantLock;
 
 public class RemoteIoThread implements Runnable {
-    private String ipAddress;
-    private int port;
     private ModbusClient modbusClient;
-    private int inputSlotNumber;
-    private int outputSlotNumber;
-    private final int READ_DELAY = 500;
+    private Configuration config;
+    private final int READ_DELAY = 100;
     private short[] prevInputState;
     private short[] prevOutputState;
     private List<Input> inputs;
+    private List<Output> outputs;
     private boolean connected;
+    private  ReentrantLock lock;
 
-    public RemoteIoThread(Configuration config, List<Input> inputs)
+    public RemoteIoThread(Configuration config, List<Input> inputs, List<Output> outputs)
     {
-        ipAddress = config.getRemoteInOutIp();
-        port = config.getRemoteInOutPort();
-        inputSlotNumber = config.getDigitalInputSlots();
-        outputSlotNumber = config.getDigitalOutputSlots();
-        prevInputState = new short[inputSlotNumber];
-        prevOutputState = new short[outputSlotNumber];
+        this.config = config;
         this.inputs = inputs;
+        this.outputs = outputs;
+
+        prevInputState = new short[config.getDigitalInputSlots()];
+        prevOutputState = new short[config.getDigitalOutputSlots()];
         connected = false;
+        lock = new ReentrantLock();
     }
     public void run() {
-        //while(true){
+        while(true){
+
             if(connected == false){
                 connected = connect();
             }else{
                 connected = transmission();
             }
-       // }
+        }
     }
 
     private boolean connect() {
         try{
-            modbusClient = new ModbusClient(ipAddress, port);
+            modbusClient = new ModbusClient(config.getRemoteInOutIp(), config.getRemoteInOutPort());
             modbusClient.Connect();
             Logger.getInstance().log("Connected to wago server");
             return true;
         }catch (IOException e){
-                Logger.getInstance().log("Unable to connect to wago server: " + e.getMessage());
-                return false;
-            }
+            Logger.getInstance().log("Unable to connect to wago server: " + e.getMessage());
+            return false;
+        }
     }
 
     private boolean transmission(){
-        int[] result;
+        //TODO: Write efficent processInputs method
+        try {
+            processInputs();
+            processOutputs();
+            Thread.sleep(READ_DELAY);
+        }catch(Exception e){
+            return false;
+        }
+        return true;
+    }
+
+    private void processOutputs() throws Exception {
+        int[] data = new int[config.getDigitalOutputSlots()];
+
+        lock.lock();
+        for(int i = 0; i < config.getDigitalOutputSlots(); i++){
+            for(int j = 0; j < config.getChannelsPerSlot(); j++){
+                if(outputs.get((i * config.getChannelsPerSlot()) + j).getValue() == 1){
+                    data[i] |= 0x0001 << j;
+                }
+            }
+        }
+        lock.unlock();
 
         try{
-            result = modbusClient.ReadInputRegisters(0, inputSlotNumber);
+            modbusClient.WriteMultipleRegisters(0, data);
         }
         catch(Exception e){
             Logger.getInstance().log(e.toString());
-            return false;
+            throw new Exception("");
+        }
+    }
+
+    private void processInputs() throws Exception {
+        int[] result;
+
+        try{
+            result = modbusClient.ReadInputRegisters(0, config.getDigitalInputSlots());
+        }
+        catch(Exception e){
+            Logger.getInstance().log(e.toString());
+            throw new Exception("cos");
         }
 
-        //TODO: Write efficent compareAndSet method
-        for(int i = 0; i < inputSlotNumber; i++){
+        lock.lock();
+        for(int i = 0; i < config.getDigitalInputSlots(); i++){
             short state = (short)result[i];
             if(prevInputState[i] != state){
                 for(int j = 0; j < 16; j++){
@@ -80,29 +114,10 @@ public class RemoteIoThread implements Runnable {
                 prevInputState[i] = (short)result[i];
             }
         }
-
-//        try{
-//            Thread.sleep(READ_DELAY);
-//        }catch(InterruptedException e){
-//            Logger.getInstance().log(e.toString());
-//        }
-
-        return true;
+        lock.unlock();
     }
 
-    //TODO: Write efficent compareAndSet method
-    private short compareAndSet(short prevValue, short value) {
-        if(prevValue != value){
-            int shift  = 0;
-            short res = (short) (prevValue^value);
-            while(res != 0){
-                if((res & 0x0001) != 0){
-                    Logger.getInstance().log(String.format("Changed on %d", shift));
-                }
-                res = (short) ((res & 0xFFFF) >>> 1);
-                shift++;
-            }
-        }
-        return value;
+    public ReentrantLock getLock() {
+        return lock;
     }
 }
