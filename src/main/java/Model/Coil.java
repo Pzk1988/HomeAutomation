@@ -39,4 +39,8 @@ public class Coil extends Token implements ILogicExpResult {
     public int getValue() {
         return value;
     }
+
+    public void setPrevValue(int prevValue) {
+        this.prevValue = prevValue;
+    }
 }

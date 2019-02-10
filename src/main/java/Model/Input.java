@@ -20,12 +20,17 @@ public class Input extends InOutBase
     private boolean outOfControl;
 
     @Override
-    public void  setValue(int value) {
+    public synchronized void setValue(int value) {
         if(value == 0){
             this.value = 0;
         }else{
             this.value = 1;
         }
+    }
+
+    @Override
+    public synchronized int getValue(){
+        return  value;
     }
 
     @Override

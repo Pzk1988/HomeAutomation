@@ -21,6 +21,7 @@ public class RemoteIoThread implements Runnable {
     private short[] prevInputState;
     private short[] prevOutputState;
     private List<Input> inputs;
+    private boolean connected;
 
     public RemoteIoThread(Configuration config, List<Input> inputs)
     {
@@ -31,16 +32,16 @@ public class RemoteIoThread implements Runnable {
         prevInputState = new short[inputSlotNumber];
         prevOutputState = new short[outputSlotNumber];
         this.inputs = inputs;
+        connected = false;
     }
     public void run() {
-        boolean connected = false;
-        while(true){
+        //while(true){
             if(connected == false){
                 connected = connect();
             }else{
                 connected = transmission();
             }
-        }
+       // }
     }
 
     private boolean connect() {
@@ -80,17 +81,11 @@ public class RemoteIoThread implements Runnable {
             }
         }
 
-
-//        int[] outputRegister = new int[outputSlotNumber];
-//        for(int i = 0; i < outputSlotNumber; i++){
+//        try{
+//            Thread.sleep(READ_DELAY);
+//        }catch(InterruptedException e){
+//            Logger.getInstance().log(e.toString());
 //        }
-//        modbusClient.WriteMultipleRegisters(0, );
-
-        try{
-            Thread.sleep(READ_DELAY);
-        }catch(InterruptedException e){
-            Logger.getInstance().log(e.toString());
-        }
 
         return true;
     }

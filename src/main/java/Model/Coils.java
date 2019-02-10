@@ -36,4 +36,10 @@ public class Coils extends AbstractList<Coil> {
         }
         return  res;
     }
+
+    public void updatePrevValue() {
+        for(Coil coil : list){
+            coil.setPrevValue(coil.getValue());
+        }
+    }
 }

@@ -11,6 +11,7 @@ import javax.xml.bind.Unmarshaller;
 import java.io.File;
 import java.util.AbstractCollection;
 import java.util.ArrayList;
+import java.util.Collection;
 
 public class HomeAutomation {
 
@@ -56,8 +57,8 @@ public class HomeAutomation {
 
         // Threads
         remoteIoThread = new RemoteIoThread(config, inputs.getList(1));
-        thread = new Thread(remoteIoThread);
-        thread.start();
+        //thread = new Thread(remoteIoThread);
+        //thread.start();
 
         // Clean
         infixExpressions = null;
@@ -67,8 +68,15 @@ public class HomeAutomation {
 
     private void runtime(){
         Logger.getInstance().log("Entering main loop");
+        long logTime = System.currentTimeMillis();
+
         while( true ){
+            //TODO: Implement remoteIoThread with non blocking functionality and thread safe
+            remoteIoThread.run();
             logixExpEvaluator.evaluate();
+            inputs.updatePrevValue();
+            outputs.updatePrevValue();
+            coils.updatePrevValue();
         }
     }
     public <T> void serialize(T object, String name) {

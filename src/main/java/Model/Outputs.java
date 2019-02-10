@@ -35,4 +35,10 @@ public class Outputs extends AbstractList<Output> {
         }
         return  res;
     }
+
+    public void updatePrevValue() {
+        for(Output out : list){
+            out.setPrevValue(out.getValue());
+        }
+    }
 }

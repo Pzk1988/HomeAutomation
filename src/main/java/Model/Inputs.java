@@ -3,6 +3,7 @@ import javax.xml.bind.annotation.*;
 import java.util.AbstractList;
 import java.util.ArrayList;
 import java.util.List;
+import Logger.Logger;
 
 @XmlRootElement(name="Inputs")
 public class Inputs extends AbstractList<Input> {
@@ -59,5 +60,13 @@ public class Inputs extends AbstractList<Input> {
             }
         }
         return list.size();
+    }
+
+    public void updatePrevValue() {
+        for(Input in : list){
+            if(in.getPrevValue() != in.getValue()){
+                in.setPrevValue(in.getValue());
+            }
+        }
     }
 }

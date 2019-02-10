@@ -20,10 +20,10 @@ public class PostfixExpression {
         Stack<Integer> stack = new Stack();
         for(Token token : postfixExpression){
             if(token.getType() == Token.TokenType.OPERAND){
-                stack.push(token.getValue());
+                stack.push(getTokenValueForEvaluation(token));
             }else{
-                int operand1 = stack.pop();
                 int operand2 = stack.pop();
+                int operand1 = stack.pop();
 
                 switch(OperatoryType.valueOf(token.getValue()))
                 {
@@ -52,7 +52,32 @@ public class PostfixExpression {
         assert( stack.size() == 1);
         out.setValue(stack.pop());
     }
-
+    private Integer getTokenValueForEvaluation(Token token) {
+        if(token.getActivity() == Token.TokenActivity.HIGH){
+            return token.getValue();
+        }else if(token.getActivity() == Token.TokenActivity.LOW) {
+            if(token.getValue() == 0){
+                return 1;
+            }else{
+                return  0;
+            }
+        } else if(token.getActivity() == Token.TokenActivity.FALLING_EDGE){
+            if( token.getPrevValue() == 1 && token.getValue() == 0){
+                return 1;
+            } else{
+                return 0;
+            }
+        } else if(token.getActivity() == Token.TokenActivity.RISING_EDGE){
+            if( token.getPrevValue() == 0 && token.getValue() == 1){
+                return 1;
+            } else{
+                return 0;
+            }
+        } else{
+            assert (false);
+            return 0;
+        }
+    }
     private ILogicExpResult out;
     private AbstractCollection<Token> postfixExpression;
 }
