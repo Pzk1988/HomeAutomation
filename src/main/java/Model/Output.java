@@ -5,7 +5,6 @@ import Logger.Logger;
 
 public class Output extends InOutBase implements ILogicExpResult {
     public Output(){}
-
     public Output(String name){
         super(name);
     }

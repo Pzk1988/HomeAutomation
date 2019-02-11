@@ -4,6 +4,8 @@
       <root url="jar://$PROJECT_DIR$/Libraries/EasyModbusJava.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/Libraries/EasyModbusJava.jar!/" />
+    </SOURCES>
   </library>
 </component>

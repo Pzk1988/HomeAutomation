@@ -1,6 +1,7 @@
 package Model;
 
 import Interface.ILogicExpResult;
+import Logger.Logger;
 
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlTransient;
@@ -13,13 +14,6 @@ public class Coil extends Token implements ILogicExpResult {
         super(TokenType.OPERAND);
         this.name = name;
     }
-    public void setValue(int value) {
-        this.value = value;
-    }
-
-    @XmlTransient
-    private int value;
-    private int prevValue;
 
     @XmlAttribute
     public String getName() {
@@ -29,18 +23,37 @@ public class Coil extends Token implements ILogicExpResult {
         this.name = name;
     }
 
-    private String name;
+    @XmlTransient
+    public void setValue(int value) {
+        this.value = value;
+    }
+    public int getValue() {
+        return value;
+    }
+
+    @XmlTransient
+    public boolean getOutOfControl() {
+        return outOfControl;
+    }
+    public void setOutOfControl(boolean outOfControl) {
+        if(outOfControl != this.outOfControl) {
+            Logger.getInstance().log(String.format("%s out of control: %b", name, outOfControl ));
+            this.outOfControl = outOfControl;
+        }
+    }
+
+    @XmlTransient
+    public void setPrevValue(int prevValue) {
+        this.prevValue = prevValue;
+    }
 
     @Override
     public String toString(){
         return "Coil: " + name + "\r\n";
     }
 
-    public int getValue() {
-        return value;
-    }
-
-    public void setPrevValue(int prevValue) {
-        this.prevValue = prevValue;
-    }
+    @XmlTransient
+    private int value;
+    private int prevValue;
+    private String name;
 }

@@ -19,6 +19,7 @@ public abstract class Token{
     public Token(TokenType type){
         this.type = type;
         this.activity = TokenActivity.HIGH;
+        this.outOfControl = true;
     }
 
     @XmlTransient
@@ -41,6 +42,9 @@ public abstract class Token{
         return getValue();
     }
 
+    public boolean getOutOfControl(){ return false; }
+
     private TokenType type;
     private TokenActivity activity;
+    protected boolean outOfControl;
 }

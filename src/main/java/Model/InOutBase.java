@@ -1,6 +1,8 @@
 package Model;
 
 import Interface.IOperand;
+import Logger.Logger;
+
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlTransient;
 
@@ -44,6 +46,17 @@ public class InOutBase extends Token
     }
     public void setNumber(int number) {
         this.number = number;
+    }
+
+    @XmlTransient
+    public boolean getOutOfControl() {
+        return outOfControl;
+    }
+    public void setOutOfControl(boolean outOfControl) {
+        if(outOfControl != this.outOfControl) {
+            Logger.getInstance().log(String.format("%s out of control: %b", name, outOfControl ));
+            this.outOfControl = outOfControl;
+        }
     }
 
     protected int value;

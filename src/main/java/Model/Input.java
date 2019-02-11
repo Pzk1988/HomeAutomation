@@ -14,16 +14,6 @@ public class Input extends InOutBase
         outOfControl = true;
     }
 
-    @XmlTransient
-    public boolean getOutOfControl() {
-        return outOfControl;
-    }
-    public void setOutOfControl(boolean outOfControl) {
-        this.outOfControl = outOfControl;
-    }
-
-    private boolean outOfControl;
-
     @Override
     public void setValue(int value) {
         if(value == 0){
