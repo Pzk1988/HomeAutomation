@@ -73,7 +73,6 @@ public class HomeAutomation {
         Logger.getInstance().log("Entering main loop");
 
         while( true ){
-            //TODO: Implement remoteIoThread with non blocking functionality and thread safe
             if(lock.tryLock()) {
                 logixExpEvaluator.evaluate();
                 inputs.updatePrevValue();

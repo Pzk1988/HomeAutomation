@@ -21,6 +21,7 @@ public class Logger {
         }catch(IOException e){
             System.out.println(e.getStackTrace());
         }
+        //TODO: Prepare implementation with storig of log in database, use hibernate
     }
 
     public static Logger getInstance(){

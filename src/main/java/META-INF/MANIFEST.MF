@@ -1,4 +1,0 @@
-Manifest-Version: 1.0
-Class-Path: E:\Intellij-workspace\HomeAutomation\src\main\java
-Main-Class: com.Main
-
