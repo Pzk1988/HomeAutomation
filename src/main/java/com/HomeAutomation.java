@@ -1,5 +1,6 @@
 package com;
 import Communication.RemoteIoThread;
+import Communication.TempThread;
 import Interface.ILogicExpResult;
 import Model.*;
 import Logger.Logger;
@@ -14,7 +15,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.concurrent.locks.ReentrantLock;
 
-public class HomeAutomation {
+public class HomeAutomation implements Runnable {
 
     private final String CONFIG_PATH = "configuration/";
     private Outputs outputs;
@@ -27,9 +28,11 @@ public class HomeAutomation {
     private AbstractCollection<Token> operandsList;
 
     private RemoteIoThread remoteIoThread;
-    private Thread thread;
+    private AbstractCollection<Thread> threads;
+    private TempThread tempThread;
     private ReentrantLock lock;
 
+    @Override
     public void run(){
         // Set up configuration
 
@@ -58,10 +61,18 @@ public class HomeAutomation {
         logixExpEvaluator.parsInfixToPostfix(infixExpressions);
 
         // Threads
+        threads = new ArrayList();
+
         remoteIoThread = new RemoteIoThread(config, inputs.getList(1), outputs.getList(1));
         lock = remoteIoThread.getLock();
-        thread = new Thread(remoteIoThread);
-        thread.start();
+        threads.add(new Thread(remoteIoThread));
+
+        tempThread = new TempThread();
+        threads.add(new Thread(tempThread));
+
+        for (Thread thread: threads) {
+            thread.start();
+        }
 
         // Clean
         infixExpressions = null;

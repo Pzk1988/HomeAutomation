@@ -19,6 +19,7 @@ public class PostfixExpEvaluatorTest {
         in.setValue(1);
         in.setActivity(Token.TokenActivity.HIGH);
         in.setPrevValue(0);
+        in.setOutOfControl(false);
         expInputs.add(in);
 
         // Calculate
@@ -41,6 +42,7 @@ public class PostfixExpEvaluatorTest {
         in.setValue(1);
         in.setActivity(Token.TokenActivity.LOW);
         in.setPrevValue(0);
+        in.setOutOfControl(false);
         expInputs.add(in);
 
         // Calculate
@@ -63,6 +65,7 @@ public class PostfixExpEvaluatorTest {
         in.setValue(0);
         in.setActivity(Token.TokenActivity.FALLING_EDGE);
         in.setPrevValue(1);
+        in.setOutOfControl(false);
         expInputs.add(in);
 
         // Calculate
@@ -91,6 +94,7 @@ public class PostfixExpEvaluatorTest {
         in.setValue(1);
         in.setActivity(Token.TokenActivity.RISING_EDGE);
         in.setPrevValue(0);
+        in.setOutOfControl(false);
         expInputs.add(in);
 
         Inputs inputs = new Inputs();
@@ -121,12 +125,14 @@ public class PostfixExpEvaluatorTest {
         in1.setValue(1);
         in1.setActivity(Token.TokenActivity.RISING_EDGE);
         in1.setPrevValue(0);
+        in1.setOutOfControl(false);
         expInputs.add(in1);
 
         Input in2 = new Input("in_2");
         in2.setValue(1);
         in2.setActivity(Token.TokenActivity.HIGH);
         in2.setPrevValue(0);
+        in2.setOutOfControl(false);
         expInputs.add(in2);
 
         expInputs.add( new Operator(OperatoryType.AND));

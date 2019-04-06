@@ -13,7 +13,7 @@ import java.util.concurrent.locks.ReentrantLock;
 public class RemoteIoThread implements Runnable {
     private ModbusClient modbusClient;
     private Configuration config;
-    private final int READ_DELAY = 100;
+    private final int READ_DELAY = 5;
     private short[] prevInputState;
     private List<Input> inputs;
     private List<Output> outputs;
